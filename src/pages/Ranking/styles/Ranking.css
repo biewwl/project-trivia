@@ -1,0 +1,316 @@
+@keyframes toLeft {
+  
+  0% {
+    opacity: 0%;
+    transform: translateX(70px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toRight {
+  
+  0% {
+    opacity: 0%;
+    transform: translateX(-70px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toTop {
+  
+  0% {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes jump {
+  
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ranking {
+  background-image: url(../images/ranking-wallpaper.jpg);
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 50px;
+  min-height: 690px;
+}
+
+.ranking .quit {
+  align-items: center;
+  background-color: #e02727;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 0 rgb(95, 0, 0);
+  color: white;
+  display: flex;
+  font-family: cream, sans-serif;
+  font-size: 1.1em;
+  font-weight: 900;
+  height: 30px;
+  justify-content: center;
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  top: 30px;
+  transition: 0.1s;
+  width: 30px;
+}
+
+.quit:active {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+.top3 {
+  align-items: center;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #484d5884 100%);
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  min-height: 650px;
+}
+
+.top3 .card-player {
+  display: grid;
+  grid-template-rows: 0.8fr 1fr;
+  position: relative;
+  width: 200px;
+}
+
+.top3 .score-player {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.score-player .name-player {
+  align-self: flex-start;
+  font-family: cream, sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.score-player .points-player {
+  font-family: cream, sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+}
+
+.score-player .assertions-player,
+.score-player .questions-amount-player {
+  font-family: cream, sans-serif;
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.top3 .card-player:after {
+  background: white;
+  clip-path: polygon(0 0, 100% 0%, 0 100%);
+  content: "";
+  height: 60px;
+  left: 0px;
+  opacity: 0.4;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+  z-index: 7;
+}
+
+.top3 .card-player img {
+  align-self: center;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+.top3 .card-player:nth-child(1) {
+  animation: toTop 0.5s;
+  background-color: gold;
+  box-shadow: 0 0 5px gold;
+  color: rgb(103, 76, 10);
+  flex-direction: column;
+  height: 300px;
+  order: 2;
+  position: relative;
+  z-index: 4;
+}
+
+.top3 .card-player:nth-child(1) img {
+  border: 5px solid goldenrod;
+  height: 100px;
+  width: 100px;
+}
+
+.crown {
+  animation: jump 1s infinite alternate;
+  font-size: 100px;
+  justify-self: center;
+  position: absolute;
+  top: -120px;
+}
+
+.gold {
+  bottom: -97px;
+  font-size: 100px;
+  justify-self: center;
+  position: absolute;
+}
+
+.silver,
+.bronze {
+  bottom: -68px;
+  font-size: 70px;
+  justify-self: center;
+  position: absolute;
+}
+
+.top3 .card-player:nth-child(2) {
+  animation: toRight 0.5s;
+  background-color: silver;
+  color: rgb(65, 65, 65);
+  flex-direction: column;
+  height: 250px;
+  order: 1;
+  position: relative;
+}
+
+.top3 .card-player:nth-child(2) img {
+  border: 5px solid grey;
+  height: 70px;
+  width: 70px;
+}
+
+.top3 .card-player:nth-child(3) {
+  animation: toLeft 0.5s;
+  background-color: rgb(165, 71, 42);
+  color: white;
+  flex-direction: column;
+  height: 250px;
+  order: 3;
+  position: relative;
+}
+
+.top3 .card-player:nth-child(3) img {
+  border: 5px solid rgb(112, 48, 29);
+  height: 70px;
+  width: 70px;
+}
+
+.ranking-players {
+  animation: toTop 1s;
+  background-color: #f09937;
+  border-radius: 0.5em;
+  border: 10px solid #f09937;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto 0;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 630px;
+  min-height: 125px;
+}
+
+.ranking-players::-webkit-scrollbar {
+  display: none;
+}
+
+.ranking-players .card-player,
+.ranking-players .card-header {
+  align-items: center;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 70px 70px 1fr repeat(3, 0.5fr);
+  justify-items: center;
+}
+
+.ranking-players .card-header {
+  background-color: #f09937;
+  color: white;
+  font-family: cream, sans-serif;
+  font-weight: 800;
+  height: 50px;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+}
+
+.ranking-players .card-header svg {
+  align-self: center;
+  font-size: 1.5em;
+}
+
+.ranking-players .card-header svg:nth-child(1) {
+  font-size: 1.2em;
+}
+
+.cards-container {
+  background-color: #fef8ed;
+  border-radius: 0.5em;
+  color: #484d58;
+}
+
+.cards-container .card-player {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  height: 80px;
+}
+
+.cards-container .card-player:last-child {
+  border-bottom: none;
+}
+
+.ranking-players img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.ranking-players .position-player {
+  align-self: center;
+  border-radius: 50%;
+  font-family: cream, sans-serif;
+  font-size: 1.3em;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ranking-players .name-player {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.ranking-players .points-player {
+  font-weight: 900;
+}

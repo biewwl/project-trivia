@@ -1,0 +1,139 @@
+@keyframes alertSave {
+  0% {
+    top: -50px;
+  }
+  20% {
+    top: 20px;
+  }
+  80% {
+    top: 20px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+@keyframes toTop {
+  
+  0% {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+.settings {
+  background-image: url(../images/wallpaper-ranking.jpg);
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.settings .quit {
+  align-items: center;
+  background-color: #e02727;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 0 rgb(95, 0, 0);
+  color: white;
+  display: flex;
+  font-family: cream, sans-serif;
+  font-size: 1.1em;
+  font-weight: 900;
+  height: 30px;
+  justify-content: center;
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  top: 30px;
+  transition: 0.1s;
+  width: 30px;
+}
+
+.settings .settings-control {
+  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  animation: toTop 0.5s;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5em;
+  display: flex;
+  height: 400px;
+  justify-content: space-around;
+  width: 600px;
+  border: 3px solid #1fbba6;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.settings .amount-control {
+  background-color: #1fbba6;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 0.5fr;
+  padding: 10px;
+  align-items: center;
+  border-radius: 0.5em;
+  color: white;
+  border: 3px solid #1a9b8a;
+  font-family: cream, sans-serif;
+  font-weight: 900;
+}
+
+.amount-control span:first-child {
+  font-size: 0.9em;
+}
+
+.amount-control .input-amount {
+  -webkit-appearance: none;
+    appearance: none;
+    height: 0.5em;
+    left: 4em;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+}
+
+.amount-control .input-amount::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #15796c;
+  cursor: pointer;
+}
+
+.settings .save {
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  font-family: cream, sans-serif;
+  padding: 5px 20px;
+  transition: 0.1s;
+  background-color: #73be43;
+  box-shadow: 0 3px 0 #5ca23e;
+  color: whitesmoke;
+  font-size: 1em;
+}
+
+.settings .save:active {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+.settings .alert-save {
+  position: absolute;
+  top: 20px;
+  animation: alertSave 3s;
+  background-color: #e02727;
+  border-radius: 0.5em;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+}

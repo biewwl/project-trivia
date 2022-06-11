@@ -1,0 +1,38 @@
+@media screen and (max-width: 400px) {
+  @keyframes feedbackAssertion {
+    0% {
+      opacity: 1;
+      font-size: 1.5em;
+      top: 110px;
+    }
+    10% {
+      font-size: 2em;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      top: 110px;
+    }
+  }
+
+  .quiz {
+    width: 90vw;
+  }
+
+  .question-container {
+    width: 100%;
+  }
+
+  .answer,
+  .question,
+  .question-detail-1,
+  .question-detail-2 {
+    width: 100%;
+  }
+
+  .f-Correct,
+  .f-Incorrect {
+    top: 110px;
+  }
+}

@@ -1,0 +1,27 @@
+@media screen and (max-width: 625px) {
+  .login {
+    height: 100vh;
+    min-height: 415px;
+  }
+
+  .login form {
+    width: 90%;
+    height: 400px;
+    grid-template-rows: 0.5fr 1fr;
+  }
+
+  .login-inputs .play {
+    position: static;
+    border-radius: 0.5em;
+    width: 90px;
+  }
+
+  .login .logo {
+    width: 80px;
+    align-self: flex-end;
+  }
+
+  .login-user-area {
+    align-self: center;
+  }
+}

@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import UserProvider from "./context/UserContext";
+import GameProvider from "./context/GameContext";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
+import Game from "./pages/Game";
+import Settings from "./pages/Settings";
+import { LoginContext } from "./context/LoginContext";
+import "./App.css";
+import Ranking from "./pages/Ranking";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserProvider>
+        <GameProvider>
+          <LoginContext.Provider value={{ loggedIn, setLoggedIn }}>
+            <Routes>
+              <Route
+                path="/"
+                element={loggedIn ? <Navigate replace to="/game" /> : <Login />}
+              />
+              <Route
+                path="/game"
+                element={loggedIn ? <Game /> : <Navigate replace to="/" />}
+              />
+              <Route exact path="/settings" element={<Settings />}></Route>
+              <Route path="ranking" element={<Ranking />}></Route>
+            </Routes>
+          </LoginContext.Provider>
+        </GameProvider>
+      </UserProvider>
     </div>
   );
 }

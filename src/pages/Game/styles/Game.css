@@ -1,0 +1,339 @@
+@keyframes timer {
+  0% {
+    width: 100vw;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes toTop {
+  0% {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toBottom {
+  0% {
+    opacity: 0%;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes feedbackAssertion {
+  0% {
+    opacity: 1;
+    font-size: 1.5em;
+  }
+  10% {
+    font-size: 2em;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+.game {
+  align-items: center;
+  background-image: url(../images/wallpaper-game.jpg);
+  /* https://data.1freewallpapers.com/download/mountains-landscape-wildlife-art-vector-2400x1350.jpg */
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  min-height: 620px;
+}
+
+.timer-container,
+.timer-container-background {
+  height: 45px;
+  left: 0;
+  position: fixed;
+  top: 65px;
+  transition: 1s;
+  width: 100vw;
+  z-index: 2;
+}
+
+.timer-container-background {
+  background-color: rgb(237, 75, 75);
+}
+
+.timer, .position-question {
+  color: white;
+  font-family: cream, sans-serif;
+  font-size: 1.3em;
+  font-weight: 800;
+  position: fixed;
+  right: 40px;
+  top: 75px;
+  z-index: 5;
+}
+
+.position-question {
+  right: auto;
+  left: 40px;
+}
+
+.timer-container::before {
+  animation: timer 30s linear;
+  background-color: black;
+  content: "";
+  height: 45px;
+  left: 0;
+  opacity: 0.1;
+  position: fixed;
+  top: 65px;
+  width: 100vw;
+  z-index: 3;
+}
+
+.timerGreen {
+  background-color: #1fbba6;
+}
+
+.timerRed {
+  background-color: #e91d46;
+  color: white;
+}
+
+.timerYellow {
+  background-color: #f8dd41;
+}
+
+.game-section {
+  padding: 100px 20px 20px;
+}
+
+.question-container {
+  align-items: center;
+  align-self: center;
+  background-color: white;
+  border-radius: 0.5em;
+  display: flex;
+  height: 120px;
+  justify-self: center;
+  padding: 10px;
+  position: relative;
+  width: 300px;
+}
+
+.question {
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 0 0 8px #252525;
+  color: #404040;
+  display: flex;
+  font-family: cream, sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  height: 120px;
+  justify-content: center;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  width: 300px;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+.question-detail-1,
+.question-detail-2 {
+  border-radius: 0.5em;
+  box-shadow: 0 0 8px #252525;
+  height: 120px;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  transform: rotate(3deg);
+  width: 300px;
+}
+
+.question-detail-2 {
+  transform: rotate(-3deg);
+}
+
+.answer {
+  animation: fade 1s;
+  background-color: white;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 0 3px 0 #acacac;
+  color: #404040;
+  cursor: pointer;
+  font-family: cream, sans-serif;
+  margin: 10px 0;
+  padding: 5px;
+  transition: 0.1s;
+}
+
+.answer:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.answer:active {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+.answer:nth-child(1) {
+  animation: toBottom 0.5s;
+}
+
+.answer:nth-child(2) {
+  animation: toBottom 0.7s;
+}
+
+.answer:nth-child(3) {
+  animation: toBottom 0.8s;
+}
+
+.quiz .answer:nth-child(4) {
+  animation: toBottom 0.9s;
+}
+
+.i-answer {
+  background-color: #b82f2b;
+  box-shadow: 0 3px 0 #8b1d1a;
+  color: whitesmoke;
+}
+
+.i-answer:disabled,
+.c-answer:disabled {
+  opacity: 1;
+}
+
+.c-answer {
+  background-color: #73be43;
+  box-shadow: 0 3px 0 #5ca23e;
+  color: whitesmoke;
+  cursor: default;
+}
+
+.quiz {
+  animation: toTop 1s;
+  background-color: #4f5456;
+  border-radius: 1em;
+  display: grid;
+  grid-template-rows: 2fr 2fr;
+  height: 460px;
+  padding: 40px 20px;
+  position: relative;
+  transition: 1s;
+  width: 350px;
+  z-index: 1;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.d1-easy {
+  background-color: #006aff;
+}
+
+.d1-medium {
+  background-color: #f8dd41;
+}
+
+.d1-hard {
+  background-color: #bf3434;
+}
+
+.d2-easy {
+  background-color: #003885;
+}
+
+.d2-medium {
+  background-color: #827500;
+}
+
+.d2-hard {
+  background-color: #670000;
+}
+
+.points-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+.points {
+  background-color: #282c34;
+  border-radius: 25px;
+  color: white;
+  padding: 3px;
+  width: 100px;
+}
+
+.points-container::after,
+.points-container::before {
+  background-color: #f8dd41;
+  border-radius: 50%;
+  bottom: 9px;
+  content: "";
+  height: 5px;
+  position: absolute;
+  transform: translateX(40px);
+  width: 5px;
+}
+
+.points-container::before {
+  transform: translateX(-40px);
+}
+
+.f-Correct,
+.f-Incorrect {
+  font-size: 2em;
+  opacity: 0;
+  position: absolute;
+  top: 115px;
+  z-index: 5;
+  justify-self: center;
+  font-family: coco, sans-serif;
+  font-weight: 900;
+  animation: feedbackAssertion 2s;
+}
+
+.f-Correct {
+  color: #71bf3f;
+}
+
+.f-Incorrect {
+  color: #ec3e3d;
+}
