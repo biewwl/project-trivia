@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/project-trivia/static/css/main.1aeca46e.css",
+    "main.js": "/project-trivia/static/js/main.1a0a5d1e.js",
+    "static/js/787.64302966.chunk.js": "/project-trivia/static/js/787.64302966.chunk.js",
+    "static/media/ranking-wallpaper.jpg": "/project-trivia/static/media/ranking-wallpaper.16efa152a980db21a791.jpg",
+    "static/media/wallpaper-game.jpg": "/project-trivia/static/media/wallpaper-game.ac198e8b6ab5a7ffe2b2.jpg",
+    "static/media/wallpaper-login.jpg": "/project-trivia/static/media/wallpaper-login.13df3b3f63d1b10829dd.jpg",
+    "static/media/wallpaper-ranking.jpg": "/project-trivia/static/media/wallpaper-ranking.13df3b3f63d1b10829dd.jpg",
+    "static/media/Cocogoose Pro-trial.ttf": "/project-trivia/static/media/Cocogoose Pro-trial.fc4c5187ea318bde306b.ttf",
+    "static/media/logo.png": "/project-trivia/static/media/logo.79be20dabeb1bce2eff6.png",
+    "static/media/cream-DEMO.ttf": "/project-trivia/static/media/cream-DEMO.b1abd7213807deb49cfd.ttf",
+    "index.html": "/project-trivia/index.html",
+    "main.1aeca46e.css.map": "/project-trivia/static/css/main.1aeca46e.css.map",
+    "main.1a0a5d1e.js.map": "/project-trivia/static/js/main.1a0a5d1e.js.map",
+    "787.64302966.chunk.js.map": "/project-trivia/static/js/787.64302966.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aeca46e.css",
+    "static/js/main.1a0a5d1e.js"
+  ]
+}
