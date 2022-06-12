@@ -90,9 +90,9 @@
 
 .timer, .position-question {
   color: white;
-  font-family: cream, sans-serif;
+  font-family: tommy, sans-serif;
   font-size: 1.3em;
-  font-weight: 800;
+  /* font-weight: 800; */
   position: fixed;
   right: 40px;
   top: 75px;
@@ -154,7 +154,7 @@
   box-shadow: 0 0 8px #252525;
   color: #404040;
   display: flex;
-  font-family: cream, sans-serif;
+  font-family: tommy, sans-serif;
   font-weight: 100;
   height: 120px;
   justify-content: center;
@@ -191,7 +191,7 @@
   box-shadow: 0 3px 0 #acacac;
   color: #404040;
   cursor: pointer;
-  font-family: cream, sans-serif;
+  font-family: tommy, sans-serif;
   margin: 10px 0;
   padding: 5px;
   transition: 0.1s;

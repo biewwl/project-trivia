@@ -8,6 +8,11 @@
   src: url(./fonts/cocogoose/Cocogoose\ Pro-trial.ttf);
 }
 
+@font-face {
+  font-family: tommy;
+  src: url(./fonts/made_tommy_soft/MADE\ Tommy\ Soft\ Bold\ PERSONAL\ USE.otf);
+}
+
 .App > section {
   text-align: center;
   min-width: 320px;
