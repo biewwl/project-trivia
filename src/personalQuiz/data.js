@@ -466,6 +466,6 @@ const getPersonalQuestions = (amount) => {
   return returnQuestions;
 };
 
-console.log(questions.length);
+// console.log(questions.length);
 
-// export default getPersonalQuestions;
+export default getPersonalQuestions;
