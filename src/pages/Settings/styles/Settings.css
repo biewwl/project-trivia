@@ -118,7 +118,6 @@
 
 .sounds-control .sounds-on,
 .sounds-control .sounds-off {
-  animation: fade 1s;
   background-color: white;
   border-radius: 0.5em;
   border: none;
@@ -128,7 +127,6 @@
   font-family: cream, sans-serif;
   margin: 10px 0;
   padding: 5px;
-  transition: 0.1s;
 }
 
 .sounds-control .s-on-disabled,
