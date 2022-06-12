@@ -23,7 +23,7 @@ function Login() {
     setToken,
     validateNameAndEmail,
   } = useContext(UserContext);
-  const { sounds } = useContext(GameContext);
+  const { sounds, language } = useContext(GameContext);
 
   const login = async (e) => {
     e.preventDefault();
@@ -38,6 +38,7 @@ function Login() {
     const sound = new Howl({ src: [src] });
     if (sounds) sound.play();
   };
+  const inEnglish = language === "en";
 
   return (
     <section className="login">
@@ -46,7 +47,7 @@ function Login() {
         <section className="login-user-area">
           <section className="login-inputs">
             <input
-              placeholder="Name"
+              placeholder={inEnglish ? "Name" : "Nome"}
               type="text"
               id="name"
               value={name}

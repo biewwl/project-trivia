@@ -19,10 +19,11 @@ function Ranking() {
   const existRanking = rankingLS !== null;
   const ranking = existRanking ? ordenateArray(rankingLS) : [];
 
-  const { assertions, points, resetScore, questionsAmount, sounds } =
+  const { assertions, points, resetScore, questionsAmount, sounds, language } =
     useContext(GameContext);
   const { name, avatar } = useContext(UserContext);
   const { loggedIn, setLoggedIn } = useContext(LoginContext);
+  const inEnglish = language === "en";
 
   const playAudio = (src) => {
     const sound = new Howl({ src: [src] });
@@ -58,13 +59,21 @@ function Ranking() {
                 <img src={e.avatar} alt="e.name" />
                 <section className="score-player">
                   <p className="name-player">{e.name}</p>
-                  <p className="points-player">{e.points} points</p>
+                  <p className="points-player">
+                    {e.points} {inEnglish ? "points" : "pontos"}
+                  </p>
                   <p className="assertions-player">
                     {e.assertions}{" "}
-                    {e.assertions === 1 ? "assertion" : "assertions"}
+                    {e.assertions === 1
+                      ? inEnglish
+                        ? "assertion"
+                        : "acerto"
+                      : inEnglish
+                      ? "assertions"
+                      : "acertos"}
                   </p>
                   <p className="questions-amount-player">
-                    {e.questionsAmount} questions
+                    {e.questionsAmount} {inEnglish ? "questions" : "perguntas"}
                   </p>
                 </section>
                 {i === 0 && <Icon icon="emojione:crown" className="crown" />}
@@ -90,12 +99,12 @@ function Ranking() {
             <Icon icon="carbon:user-avatar" />
           </abbr>
 
-          <span>Player</span>
-          <span>Points</span>
-          <abbr title="Assertions">
+          <span>{inEnglish ? "Player" : "Jogador"}</span>
+          <span>{inEnglish ? "Points" : "Pontos"}</span>
+          <abbr title={inEnglish ? "assertions" : "acertos"}>
             <Icon icon="fluent:target-arrow-20-regular" />
           </abbr>
-          <abbr title="Questions amount">
+          <abbr title={inEnglish ? "questions" : "perguntas"}>
             <Icon icon="eva:question-mark-fill" />
           </abbr>
         </section>

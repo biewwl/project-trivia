@@ -1,23 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GameContext } from "../../context/GameContext";
-import lS from "../../helpers/localStorageManager";
 import "./styles/Settings.css";
 import "./styles/Settings-mobile.css";
 import Quit from "./audios/UI Back.wav";
 import Click from "./audios/Click.wav";
-import Message from "./audios/New Message.wav";
 import { Howl } from "howler";
+import { Icon } from "@iconify/react";
 
 function Settings() {
-  const questionsAmountLS = lS("g", "biewwl-trivia-questions-amount");
-  const existQuestionsAmount = questionsAmountLS !== null;
-  const { setQuestionsAmount, sounds, setSounds } = useContext(GameContext);
-
-  const [amount, setAmount] = useState(
-    existQuestionsAmount ? questionsAmountLS : 5
-  );
-  const [alert, setAlert] = useState(false);
+  const {
+    questionsAmount,
+    setQuestionsAmount,
+    sounds,
+    setSounds,
+    language,
+    setLanguage,
+  } = useContext(GameContext);
 
   const playAudio = (src) => {
     const sound = new Howl({ src: [src] });
@@ -29,62 +28,73 @@ function Settings() {
     sound.play();
   };
 
+  const inEnglish = language === "en";
+
   return (
     <section className="settings">
-      {alert && <span className="alert-save">Saved Preferences!</span>}
       <Link to="/" className="quit" onClick={() => playAudio(Quit)}>
         ✕
       </Link>
       <section className="settings-control">
         <section className="amount-control">
-          <span>Questions amount:</span>
+          <span>{inEnglish ? "Questions" : "Perguntas"}</span>
           <input
             type="range"
             id="amount"
             min={5}
             max={10}
-            value={amount}
+            value={questionsAmount}
             onChange={({ target }) => {
-              setAmount(Number(target.value));
               playAudio(Click);
+              setQuestionsAmount(Number(target.value));
             }}
             className="input-amount"
           />
-          <span>{amount}</span>
+          <span>{questionsAmount}</span>
         </section>
         <section className="sounds-control">
-          <span>Sounds:</span>
+          <span>{inEnglish ? "Sounds" : "Sons"}</span>
           <button
-            className={`sounds-on${sounds ? '' : ' s-on-disabled'}`}
+            className={`sounds-on${sounds ? "" : " s-on-disabled"}`}
             onClick={() => {
               setSounds(true);
               forcePlayAudio(Click);
             }}
           >
-            Yes
+            {inEnglish ? "Yes" : "Sim"}
           </button>
           <button
-             className={`sounds-off${!sounds ? '' : ' s-off-disabled'}`}
+            className={`sounds-off${!sounds ? "" : " s-off-disabled"}`}
             onClick={() => {
               setSounds(false);
             }}
           >
-            No
+            {inEnglish ? "No" : "Não"}
           </button>
         </section>
-        <button
-          type="button"
-          onClick={() => {
-            setQuestionsAmount(amount);
-            playAudio(Click);
-            playAudio(Message);
-            setAlert(true);
-            setTimeout(() => setAlert(false), 3000);
-          }}
-          className="save"
-        >
-          Save
-        </button>
+        <section className="language-control">
+          <span>{inEnglish ? "Language" : "Idioma"}</span>
+          <button
+            className={`language-en${inEnglish ? "" : " l-en-disabled"}`}
+            onClick={() => {
+              setLanguage("en");
+              playAudio(Click);
+            }}
+          >
+            <span>{inEnglish ? "English" : "Inglês"}</span>
+            <Icon icon="emojione:flag-for-united-states" />
+          </button>
+          <button
+            className={`language-en${!inEnglish ? "" : " l-pt-br-disabled"}`}
+            onClick={() => {
+              setLanguage("pt-br");
+              playAudio(Click);
+            }}
+          >
+            <span>{inEnglish ? "Portuguese" : "Português"}</span>
+            <Icon icon="emojione:flag-for-brazil" />
+          </button>
+        </section>
       </section>
     </section>
   );

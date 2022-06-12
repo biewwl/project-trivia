@@ -9,7 +9,9 @@
     grid-template-rows: 0.5fr 1fr;
   }
 
-  .settings .amount-control, .settings .sounds-control {
+  .settings .amount-control,
+  .settings .sounds-control,
+  .settings .language-control {
     width: 95%;
   }
 
@@ -24,5 +26,11 @@
   .amount-control .input-amount {
     width: 100%;
     height: 5px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .language-en span, .language-pt-br span {
+    display: none;
   }
 }

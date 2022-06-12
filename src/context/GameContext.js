@@ -8,12 +8,15 @@ export default function GameProvider({ children }) {
   const existQuestionsAmount = questionsAmountLS !== null;
   const soundsLS = lS("g", "biewwl-trivia-sounds");
   const existSounds = soundsLS !== null;
+  const languageLS = lS("g", "biewwl-trivia-language");
+  const existLanguage = languageLS !== null;
 
   const [game, setGame] = useState({
     questionsAmount: existQuestionsAmount ? questionsAmountLS : 5,
     assertions: 0,
     points: 0,
     sounds: existSounds ? soundsLS : true,
+    language: existLanguage ? languageLS : 'en',
   });
 
   const setQuestionsAmount = (number) => {
@@ -33,9 +36,14 @@ export default function GameProvider({ children }) {
     lS("s", "biewwl-trivia-sounds", bool);
   };
 
+  const setLanguage = (abbr) => {
+    setGame({ ...game, language: abbr });
+    lS("s", "biewwl-trivia-language", abbr);
+  };
+
   const resetScore = () => setGame({ ...game, assertions: 0, points: 0 });
 
-  const { questionsAmount, assertions, points, sounds } = game;
+  const { questionsAmount, assertions, points, sounds, language } = game;
 
   return (
     <GameContext.Provider
@@ -47,6 +55,8 @@ export default function GameProvider({ children }) {
         points,
         sounds,
         setSounds,
+        language,
+        setLanguage,
         resetScore,
       }}
     >

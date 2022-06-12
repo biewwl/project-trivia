@@ -16,6 +16,7 @@ import QGone from "./audios/Question Gone.wav";
 import CountDown from "./audios/Countdown.wav";
 import Leaving from "./audios/Leaving.wav";
 import { Howl } from "howler";
+import getPersonalQuestions from "../../personalQuiz/data";
 
 function Game() {
   const [results, setResults] = useState({
@@ -36,6 +37,7 @@ function Game() {
     points,
     resetScore,
     sounds,
+    language,
   } = useContext(GameContext);
   const { token } = useContext(UserContext);
   const navigate = useNavigate();
@@ -48,7 +50,7 @@ function Game() {
     setStatusAssertion({ ...statusAssertion, chosenAnswer: bool });
   const setIsCorrect = (bool) =>
     setStatusAssertion({ chosenAnswer: true, isCorrect: bool });
-
+  const inEnglish = language === "en";
   const createAnswers = (cA, iA) => {
     const answersArray = [cA, ...iA].sort(() => Math.random() - 0.5);
     return answersArray;
@@ -62,7 +64,9 @@ function Game() {
   useEffect(() => {
     resetScore();
     async function getResults() {
-      const questionsArray = await getQuestions(token, questionsAmount);
+      const questionsArray = inEnglish
+        ? await getQuestions(token, questionsAmount)
+        : getPersonalQuestions(questionsAmount);
       const customQuestions = questionsArray.map((e) => ({
         ...e,
         answers: createAnswers(e.correct_answer, e.incorrect_answers),
@@ -154,6 +158,15 @@ function Game() {
   };
 
   const feedbackAssertion = () => (isCorrect ? "Correct" : "Incorrect");
+  const feedbackAssertionSpan = (status) => {
+    if (inEnglish) {
+      if (status === "Correct") return "Correct!";
+      if (status === "Incorrect") return "Incorrect!";
+    } else {
+      if (status === "Correct") return "Correto!";
+      if (status === "Incorrect") return "Incorreto!";
+    }
+  };
 
   const defineSize = (length, max, ideal, adjust) => {
     if (length >= max) return adjust;
@@ -182,7 +195,7 @@ function Game() {
           <section className="quiz">
             {chosenAnswer && (
               <span className={`f-${feedbackAssertion()}`}>
-                {feedbackAssertion()}!
+                {feedbackAssertionSpan(feedbackAssertion())}
               </span>
             )}
             <section className="points-container">
