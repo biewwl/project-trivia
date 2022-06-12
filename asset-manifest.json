@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/project-trivia/static/css/main.49d98fc8.css",
-    "main.js": "/project-trivia/static/js/main.f7e8c6dc.js",
+    "main.css": "/project-trivia/static/css/main.af8c552e.css",
+    "main.js": "/project-trivia/static/js/main.db1a3033.js",
     "static/js/787.64302966.chunk.js": "/project-trivia/static/js/787.64302966.chunk.js",
     "static/media/ranking-wallpaper.jpg": "/project-trivia/static/media/ranking-wallpaper.16efa152a980db21a791.jpg",
     "static/media/Leaving.wav": "/project-trivia/static/media/Leaving.fb43108908b2c55a7402.wav",
@@ -12,6 +12,7 @@
     "static/media/wallpaper-login.jpg": "/project-trivia/static/media/wallpaper-login.13df3b3f63d1b10829dd.jpg",
     "static/media/wallpaper-ranking.jpg": "/project-trivia/static/media/wallpaper-ranking.13df3b3f63d1b10829dd.jpg",
     "static/media/Cocogoose Pro-trial.ttf": "/project-trivia/static/media/Cocogoose Pro-trial.fc4c5187ea318bde306b.ttf",
+    "static/media/MADE Tommy Soft Bold PERSONAL USE.otf": "/project-trivia/static/media/MADE Tommy Soft Bold PERSONAL USE.dade5a5825589c64cd34.otf",
     "static/media/logo.png": "/project-trivia/static/media/logo.79be20dabeb1bce2eff6.png",
     "static/media/Question Gone.wav": "/project-trivia/static/media/Question Gone.76a1fbddfa447ff99265.wav",
     "static/media/Countdown.wav": "/project-trivia/static/media/Countdown.858bf0906089f6d27131.wav",
@@ -20,12 +21,12 @@
     "static/media/Click.wav": "/project-trivia/static/media/Click.e774476a9c074edf8c83.wav",
     "static/media/Play.wav": "/project-trivia/static/media/Play.a1e153d8bfb528698e77.wav",
     "index.html": "/project-trivia/index.html",
-    "main.49d98fc8.css.map": "/project-trivia/static/css/main.49d98fc8.css.map",
-    "main.f7e8c6dc.js.map": "/project-trivia/static/js/main.f7e8c6dc.js.map",
+    "main.af8c552e.css.map": "/project-trivia/static/css/main.af8c552e.css.map",
+    "main.db1a3033.js.map": "/project-trivia/static/js/main.db1a3033.js.map",
     "787.64302966.chunk.js.map": "/project-trivia/static/js/787.64302966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49d98fc8.css",
-    "static/js/main.f7e8c6dc.js"
+    "static/css/main.af8c552e.css",
+    "static/js/main.db1a3033.js"
   ]
 }
