@@ -1,22 +1,32 @@
 {
   "files": {
     "main.css": "/project-trivia/static/css/main.1aeca46e.css",
-    "main.js": "/project-trivia/static/js/main.374caf53.js",
+    "main.js": "/project-trivia/static/js/main.d69a1f2c.js",
     "static/js/787.64302966.chunk.js": "/project-trivia/static/js/787.64302966.chunk.js",
     "static/media/ranking-wallpaper.jpg": "/project-trivia/static/media/ranking-wallpaper.16efa152a980db21a791.jpg",
+    "static/media/Leaving.wav": "/project-trivia/static/media/Leaving.fb43108908b2c55a7402.wav",
+    "static/media/Question Appears.wav": "/project-trivia/static/media/Question Appears.eb17b5ab53bc472dc1dd.wav",
+    "static/media/Correct.wav": "/project-trivia/static/media/Correct.cf350bbe75ad598c3ea8.wav",
+    "static/media/Incorrect.wav": "/project-trivia/static/media/Incorrect.9da0bd739420255c3613.wav",
     "static/media/wallpaper-game.jpg": "/project-trivia/static/media/wallpaper-game.ac198e8b6ab5a7ffe2b2.jpg",
     "static/media/wallpaper-login.jpg": "/project-trivia/static/media/wallpaper-login.13df3b3f63d1b10829dd.jpg",
     "static/media/wallpaper-ranking.jpg": "/project-trivia/static/media/wallpaper-ranking.13df3b3f63d1b10829dd.jpg",
     "static/media/Cocogoose Pro-trial.ttf": "/project-trivia/static/media/Cocogoose Pro-trial.fc4c5187ea318bde306b.ttf",
     "static/media/logo.png": "/project-trivia/static/media/logo.79be20dabeb1bce2eff6.png",
+    "static/media/Question Gone.wav": "/project-trivia/static/media/Question Gone.76a1fbddfa447ff99265.wav",
+    "static/media/New Message.wav": "/project-trivia/static/media/New Message.0861dc5b64d535d36b20.wav",
+    "static/media/Countdown.wav": "/project-trivia/static/media/Countdown.858bf0906089f6d27131.wav",
+    "static/media/UI Back.wav": "/project-trivia/static/media/UI Back.4796f1f5205e05120c1d.wav",
     "static/media/cream-DEMO.ttf": "/project-trivia/static/media/cream-DEMO.b1abd7213807deb49cfd.ttf",
+    "static/media/Click.wav": "/project-trivia/static/media/Click.e774476a9c074edf8c83.wav",
+    "static/media/Play.wav": "/project-trivia/static/media/Play.a1e153d8bfb528698e77.wav",
     "index.html": "/project-trivia/index.html",
     "main.1aeca46e.css.map": "/project-trivia/static/css/main.1aeca46e.css.map",
-    "main.374caf53.js.map": "/project-trivia/static/js/main.374caf53.js.map",
+    "main.d69a1f2c.js.map": "/project-trivia/static/js/main.d69a1f2c.js.map",
     "787.64302966.chunk.js.map": "/project-trivia/static/js/787.64302966.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1aeca46e.css",
-    "static/js/main.374caf53.js"
+    "static/js/main.d69a1f2c.js"
   ]
 }
