@@ -155,6 +155,11 @@ function Game() {
 
   const feedbackAssertion = () => (isCorrect ? "Correct" : "Incorrect");
 
+  const defineSize = (length, max, ideal, adjust) => {
+    if (length >= max) return adjust;
+    return ideal;
+  };
+
   return (
     <section className="game">
       <Header />
@@ -190,7 +195,19 @@ function Game() {
               <div
                 className={`question-detail-2 d2-${questions[index].difficulty}`}
               ></div>
-              <h3 className="question">{tF(questions[index].question)}</h3>
+              <h3
+                className="question"
+                style={{
+                  fontSize: defineSize(
+                    tF(questions[index].question).length,
+                    130,
+                    "1em",
+                    " 0.8em"
+                  ),
+                }}
+              >
+                {tF(questions[index].question)}
+              </h3>
             </section>
             <section className="answer-options">
               {questions[index].answers.map((answer) => (
@@ -202,6 +219,14 @@ function Game() {
                     setClass(target);
                   }}
                   key={tF(answer)}
+                  style={{
+                    fontSize: defineSize(
+                      tF(answer).length,
+                      40,
+                      "0.9em",
+                      "0.6em"
+                    ),
+                  }}
                 >
                   {tF(answer)}
                 </button>
