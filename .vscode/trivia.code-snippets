@@ -1,0 +1,21 @@
+{
+	"question": {
+		"prefix": "qq",
+		"body": [
+			"{",
+			"  category: \"\",",
+			"  correct_answer: \"\",",
+			"  difficulty: \"\",",
+			"  incorrect_answers: [",
+			"    \"\",",
+			"    \"\",",
+			"    \"\",",
+			"  ],",
+			"  question:",
+			"    \"\",",
+			"  type: \"multiple\",",
+			"},"
+		],
+		"description": "question"
+	}
+}
