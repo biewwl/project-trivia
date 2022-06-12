@@ -4,6 +4,10 @@ import { GameContext } from "../../context/GameContext";
 import lS from "../../helpers/localStorageManager";
 import "./styles/Settings.css";
 import "./styles/Settings-mobile.css";
+import Quit from "./audios/UI Back.wav";
+import Click from "./audios/Click.wav";
+import Message from "./audios/New Message.wav";
+import { Howl } from "howler";
 
 function Settings() {
   const questionsAmountLS = lS("g", "biewwl-trivia-questions-amount");
@@ -15,10 +19,15 @@ function Settings() {
   );
   const [alert, setAlert] = useState(false);
 
+  const playAudio = (src) => {
+    const sound = new Howl({ src: [src] });
+    sound.play();
+  };
+
   return (
     <section className="settings">
       {alert && <span className="alert-save">Saved Preferences!</span>}
-      <Link to="/" className="quit">
+      <Link to="/" className="quit" onClick={() => playAudio(Quit)}>
         ✕
       </Link>
       <section className="settings-control">
@@ -30,7 +39,10 @@ function Settings() {
             min={5}
             max={10}
             value={amount}
-            onChange={({ target }) => setAmount(Number(target.value))}
+            onChange={({ target }) => {
+              setAmount(Number(target.value));
+              playAudio(Click);
+            }}
             className="input-amount"
           />
           <span>{amount}</span>
@@ -39,6 +51,8 @@ function Settings() {
           type="button"
           onClick={() => {
             setQuestionsAmount(amount);
+            playAudio(Click);
+            playAudio(Message);
             setAlert(true);
             setTimeout(() => setAlert(false), 3000);
           }}

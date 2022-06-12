@@ -7,6 +7,9 @@ import { Icon } from "@iconify/react";
 import logo from "./images/logo.png";
 import "./styles/Login.css";
 import "./styles/Login-mobile.css";
+import { Howl } from "howler";
+import Play from "./audios/Play.wav";
+import Click from "./audios/Click.wav";
 
 function Login() {
   const { setLoggedIn } = useContext(LoginContext);
@@ -22,10 +25,16 @@ function Login() {
 
   const login = async (e) => {
     e.preventDefault();
+    playAudio(Play);
     const token = await getToken();
     await setToken(token);
     await setAvatar(email);
     setLoggedIn(true);
+  };
+
+  const playAudio = (src) => {
+    const sound = new Howl({ src: [src] });
+    sound.play();
   };
 
   return (
@@ -59,10 +68,18 @@ function Login() {
             </button>
           </section>
           <section className="login-options">
-            <Link className="ranking-option" to="ranking">
+            <Link
+              className="ranking-option"
+              to="ranking"
+              onClick={() => playAudio(Click)}
+            >
               Ranking <Icon icon="icon-park-outline:ranking" />
             </Link>
-            <Link className="settings-option" to="settings">
+            <Link
+              className="settings-option"
+              to="settings"
+              onClick={() => playAudio(Click)}
+            >
               <Icon icon="cil:settings" />
             </Link>
           </section>

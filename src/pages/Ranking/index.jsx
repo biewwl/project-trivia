@@ -7,6 +7,8 @@ import { LoginContext } from "../../context/LoginContext";
 import lS from "../../helpers/localStorageManager";
 import "./styles/Ranking.css";
 import "./styles/Ranking-mobile.css";
+import Quit from "./audios/UI Back.wav";
+import { Howl } from "howler";
 
 function Ranking() {
   const ordenateArray = (array) => array.sort((a, b) => b.points - a.points);
@@ -21,6 +23,11 @@ function Ranking() {
     useContext(GameContext);
   const { name, avatar } = useContext(UserContext);
   const { loggedIn, setLoggedIn } = useContext(LoginContext);
+
+  const playAudio = (src) => {
+    const sound = new Howl({ src: [src] });
+    sound.play();
+  }
 
   useEffect(() => {
     if (loggedIn) {
@@ -41,7 +48,7 @@ function Ranking() {
 
   return (
     <section className="ranking">
-      <Link to="/" className="quit">
+      <Link to="/" className="quit" onClick={() => playAudio(Quit)}>
         ✕
       </Link>
       <section className="top3">

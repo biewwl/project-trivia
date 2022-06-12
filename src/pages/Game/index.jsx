@@ -9,6 +9,13 @@ import tF from "../../helpers/textFormat";
 import { getQuestions } from "../../helpers/fetchTrivia";
 import "./styles/Game.css";
 import "./styles/Game-mobile.css";
+import Correct from "./audios/Correct.wav";
+import Incorrect from "./audios/Incorrect.wav";
+import QAppears from "./audios/Question Appears.wav";
+import QGone from "./audios/Question Gone.wav";
+import CountDown from "./audios/Countdown.wav";
+import Leaving from "./audios/Leaving.wav";
+import { Howl } from "howler";
 
 function Game() {
   const [results, setResults] = useState({
@@ -41,6 +48,11 @@ function Game() {
     return answersArray;
   };
 
+  const playAudio = (src) => {
+    const sound = new Howl({ src: [src] });
+    sound.play();
+  }
+
   useEffect(() => {
     resetScore();
     async function getResults() {
@@ -50,6 +62,7 @@ function Game() {
         answers: createAnswers(e.correct_answer, e.incorrect_answers),
       }));
       setQuestions(customQuestions);
+      playAudio(QAppears);
     }
     getResults();
   }, []);
@@ -60,11 +73,15 @@ function Game() {
     if (timer !== 0) {
       intervalId = setInterval(() => {
         setTimer(timer - 1);
-      }, 2000);
+        if (timer <= 11) playAudio(CountDown);
+      }, 1000);
     } else if (index < questions.length - 1) {
       setChosenAnswer(true);
       showCorrectAnswer();
+      playAudio(QGone);
+      playAudio(Incorrect);
       setTimeout(() => {
+        playAudio(QAppears);
         setIndex(index + 1);
         setTimer(30);
         setChosenAnswer(false);
@@ -74,6 +91,7 @@ function Game() {
       showCorrectAnswer();
       setTimeout(() => {
         navigate("/ranking");
+        playAudio(Leaving);
       }, 2000);
     }
     return () => clearInterval(intervalId);
@@ -94,9 +112,11 @@ function Game() {
     const { difficulty, correct_answer } = questions[index];
     if (target.textContent !== tF(correct_answer)) {
       target.className = "answer i-answer";
+      playAudio(Incorrect);
     } else {
       setAssertions(assertions + 1, timer, difficulty);
       setIsCorrect(true);
+      playAudio(Correct);
     }
     setTimeout(() => {
       target.className = "answer";
@@ -109,8 +129,10 @@ function Game() {
     setTimeout(() => {
       if (index < questions.length - 1) {
         setIndex(index + 1);
+        playAudio(QAppears);
       } else {
         navigate("/ranking");
+        playAudio(Leaving);
       }
       setIsCorrect(false);
       setTimer(30);
@@ -143,7 +165,9 @@ function Game() {
             ></section>
           )}
           <span className="timer">{timer}'</span>
-          <span className="position-question">{index + 1}/{questions.length}</span>
+          <span className="position-question">
+            {index + 1}/{questions.length}
+          </span>
           <section className="quiz">
             {chosenAnswer && (
               <span className={`f-${feedbackAssertion()}`}>

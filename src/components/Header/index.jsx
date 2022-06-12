@@ -5,16 +5,24 @@ import { Icon } from '@iconify/react';
 import './styles/Header.css';
 import logo from './images/logo.png';
 import './styles/Header-mobile.css';
+import Click from "./audios/Click.wav";
+import { Howl } from "howler";
 
 function Header() {
   const { setLoggedIn } = useContext(LoginContext);
   const { name, avatar } = useContext(UserContext);
+
+  const playAudio = (src) => {
+    const sound = new Howl({ src: [src] });
+    sound.play();
+  }
   
   return (
     <header>
       <button
         onClick={() => {
           setLoggedIn(false);
+          playAudio(Click);
         }}
         className="logout"
       >
