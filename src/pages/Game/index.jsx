@@ -67,7 +67,6 @@ function Game() {
       const questionsArray = inEnglish
         ? await getQuestions(token, questionsAmount)
         : getPersonalQuestions(questionsAmount);
-        console.log(questionsArray);
       const customQuestions = questionsArray.map((e) => ({
         ...e,
         answers: createAnswers(e.correct_answer, e.incorrect_answers),

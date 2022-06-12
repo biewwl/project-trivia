@@ -1195,95 +1195,9 @@ const questions = [
 
 const getPersonalQuestions = (amount) => {
   questions.sort(() => Math.random() - 0.5);
-  const firstQuestion = questions[0];
-  questions.sort(() => Math.random() - 0.5);
-  const secondQuestion = questions.filter((e) => e !== firstQuestion)[0];
-  questions.sort(() => Math.random() - 0.5);
-  const thirdQuestion = questions.filter(
-    (e) => e !== firstQuestion && e !== secondQuestion
-  )[0];
-  questions.sort(() => Math.random() - 0.5);
-  const questionFour = questions.filter(
-    (e) => e !== firstQuestion && e !== secondQuestion && e !== thirdQuestion
-  )[0];
-  questions.sort(() => Math.random() - 0.5);
-  const questionFive = questions.filter(
-    (e) =>
-      e !== firstQuestion &&
-      e !== secondQuestion &&
-      e !== thirdQuestion &&
-      e !== questionFour
-  )[0];
-  questions.sort(() => Math.random() - 0.5);
-  const questionSix = questions.filter(
-    (e) =>
-      e !== firstQuestion &&
-      e !== secondQuestion &&
-      e !== thirdQuestion &&
-      e !== questionFour &&
-      e !== questionFive
-  )[0];
-  questions.sort(() => Math.random() - 0.5);
-  const questionSeven = questions.filter(
-    (e) =>
-      e !== firstQuestion &&
-      e !== secondQuestion &&
-      e !== thirdQuestion &&
-      e !== questionFour &&
-      e !== questionFive &&
-      e !== questionSix
-  )[0];
-  questions.sort(() => Math.random() - 0.5);
-  const questionEight = questions.filter(
-    (e) =>
-      e !== firstQuestion &&
-      e !== secondQuestion &&
-      e !== thirdQuestion &&
-      e !== questionFour &&
-      e !== questionFive &&
-      e !== questionSix &&
-      e !== questionSeven
-  )[0];
-  questions.sort(() => Math.random() - 0.5);
-  const questionNine = questions.filter(
-    (e) =>
-      e !== firstQuestion &&
-      e !== secondQuestion &&
-      e !== thirdQuestion &&
-      e !== questionFour &&
-      e !== questionFive &&
-      e !== questionSix &&
-      e !== questionSeven &&
-      e !== questionEight
-  )[0];
-  questions.sort(() => Math.random() - 0.5);
-  const questionTen = questions.filter(
-    (e) =>
-      e !== firstQuestion &&
-      e !== secondQuestion &&
-      e !== thirdQuestion &&
-      e !== questionFour &&
-      e !== questionFive &&
-      e !== questionSix &&
-      e !== questionSeven &&
-      e !== questionEight &&
-      e !== questionNine
-  )[0];
-  const allQuestions = [
-    firstQuestion,
-    secondQuestion,
-    thirdQuestion,
-    questionFour,
-    questionFive,
-    questionSix,
-    questionSeven,
-    questionEight,
-    questionNine,
-    questionTen,
-  ];
   const returnQuestions = [];
   for (let i = 0; i < amount; i += 1) {
-    returnQuestions.push(allQuestions[i]);
+    returnQuestions.push(questions[i]);
   }
   return returnQuestions;
 };
