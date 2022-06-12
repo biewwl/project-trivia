@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LoginContext } from "../../context/LoginContext";
 import { UserContext } from "../../context/UserContext";
+import { GameContext } from "../../context/GameContext";
 import { Icon } from '@iconify/react';
 import './styles/Header.css';
 import logo from './images/logo.png';
@@ -11,11 +12,12 @@ import { Howl } from "howler";
 function Header() {
   const { setLoggedIn } = useContext(LoginContext);
   const { name, avatar } = useContext(UserContext);
+  const { sounds } = useContext(GameContext);
 
   const playAudio = (src) => {
     const sound = new Howl({ src: [src] });
-    sound.play();
-  }
+    if (sounds) sound.play();
+  };
   
   return (
     <header>

@@ -12,7 +12,7 @@ import { Howl } from "howler";
 function Settings() {
   const questionsAmountLS = lS("g", "biewwl-trivia-questions-amount");
   const existQuestionsAmount = questionsAmountLS !== null;
-  const { setQuestionsAmount } = useContext(GameContext);
+  const { setQuestionsAmount, sounds, setSounds } = useContext(GameContext);
 
   const [amount, setAmount] = useState(
     existQuestionsAmount ? questionsAmountLS : 5
@@ -20,6 +20,11 @@ function Settings() {
   const [alert, setAlert] = useState(false);
 
   const playAudio = (src) => {
+    const sound = new Howl({ src: [src] });
+    if (sounds) sound.play();
+  };
+
+  const forcePlayAudio = (src) => {
     const sound = new Howl({ src: [src] });
     sound.play();
   };
@@ -46,6 +51,26 @@ function Settings() {
             className="input-amount"
           />
           <span>{amount}</span>
+        </section>
+        <section className="sounds-control">
+          <span>Sounds:</span>
+          <button
+            className={`sounds-on${sounds ? '' : ' s-on-disabled'}`}
+            onClick={() => {
+              setSounds(true);
+              forcePlayAudio(Click);
+            }}
+          >
+            Yes
+          </button>
+          <button
+             className={`sounds-off${!sounds ? '' : ' s-off-disabled'}`}
+            onClick={() => {
+              setSounds(false);
+            }}
+          >
+            No
+          </button>
         </section>
         <button
           type="button"

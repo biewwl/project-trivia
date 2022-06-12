@@ -9,7 +9,7 @@
     grid-template-rows: 0.5fr 1fr;
   }
 
-  .settings .amount-control {
+  .settings .amount-control, .settings .sounds-control {
     width: 95%;
   }
 

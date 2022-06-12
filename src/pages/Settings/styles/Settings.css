@@ -14,7 +14,6 @@
 }
 
 @keyframes toTop {
-  
   0% {
     opacity: 0%;
     transform: translateY(50px);
@@ -26,13 +25,13 @@
 }
 
 .settings {
+  align-items: center;
   background-image: url(../images/wallpaper-ranking.jpg);
   background-position: top;
   background-size: cover;
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
 }
 
 .settings .quit {
@@ -62,64 +61,113 @@
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.6);
   border-radius: 0.5em;
+  border: 3px solid #1fbba6;
   display: flex;
+  flex-direction: column;
   height: 400px;
   justify-content: space-around;
-  width: 600px;
-  border: 3px solid #1fbba6;
-  flex-direction: column;
   padding: 10px;
+  width: 600px;
 }
 
-.settings .amount-control {
-  background-color: #1fbba6;
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) 0.5fr;
-  padding: 10px;
+.settings .amount-control,
+.settings .sounds-control {
   align-items: center;
+  background-color: #1fbba6;
   border-radius: 0.5em;
-  color: white;
   border: 3px solid #1a9b8a;
+  color: white;
+  display: grid;
   font-family: cream, sans-serif;
   font-weight: 900;
+  grid-template-columns: repeat(2, 1fr) 0.5fr;
+  padding: 10px;
+  width: 80%;
 }
 
-.amount-control span:first-child {
+.settings .sounds-control {
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.settings .amount-control span:first-child,
+.settings .sounds-control span:first-child {
   font-size: 0.9em;
+  text-align: start;
 }
 
 .amount-control .input-amount {
   -webkit-appearance: none;
-    appearance: none;
-    height: 0.5em;
-    left: 4em;
-    border-radius: 5px;
-    background-color: white;
-    outline: none;
+  appearance: none;
+  background-color: white;
+  border-radius: 5px;
+  height: 0.5em;
+  left: 4em;
+  outline: none;
 }
 
 .amount-control .input-amount::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%; 
   background: #15796c;
+  border-radius: 50%;
   cursor: pointer;
+  height: 15px;
+  width: 15px;
+}
+
+.sounds-control .sounds-on,
+.sounds-control .sounds-off {
+  animation: fade 1s;
+  background-color: white;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 0 3px 0 #acacac;
+  color: #404040;
+  cursor: pointer;
+  font-family: cream, sans-serif;
+  margin: 10px 0;
+  padding: 5px;
+  transition: 0.1s;
+}
+
+.sounds-control .s-on-disabled,
+.sounds-control .s-off-disabled {
+  background-color: white;
+  box-shadow: 0 3px 0 #acacac;
+  color: #404040;
+  opacity: 0.5;
+}
+
+.sounds-control .sounds-on:active,
+.sounds-control .sounds-off:active {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+.sounds-control .sounds-on {
+  background-color: #73be43;
+  box-shadow: 0 3px 0 #5ca23e;
+  color: white;
+}
+
+.sounds-control .sounds-off {
+  background-color: #b82f2b;
+  box-shadow: 0 3px 0 #8b1d1a;
+  color: whitesmoke;
 }
 
 .settings .save {
+  background-color: #1fbba6;
   border-radius: 0.5em;
   border: none;
+  box-shadow: 0 3px 0 #15796c;
+  color: whitesmoke;
   cursor: pointer;
   font-family: cream, sans-serif;
+  font-size: 1em;
   padding: 5px 20px;
   transition: 0.1s;
-  background-color: #73be43;
-  box-shadow: 0 3px 0 #5ca23e;
-  color: whitesmoke;
-  font-size: 1em;
 }
 
 .settings .save:active {
@@ -128,12 +176,11 @@
 }
 
 .settings .alert-save {
+  animation: alertSave 3s;
+  background-color: #282c34;
+  border-radius: 0.5em;
+  color: white;
+  padding: 10px;
   position: absolute;
   top: 20px;
-  animation: alertSave 3s;
-  background-color: #e02727;
-  border-radius: 0.5em;
-  padding: 10px;
-  background-color: #282c34;
-  color: white;
 }

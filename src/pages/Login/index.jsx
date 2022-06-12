@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import { LoginContext } from "../../context/LoginContext";
+import { GameContext } from "../../context/GameContext";
 import { getToken } from "../../helpers/fetchTrivia";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
@@ -22,6 +23,7 @@ function Login() {
     setToken,
     validateNameAndEmail,
   } = useContext(UserContext);
+  const { sounds } = useContext(GameContext);
 
   const login = async (e) => {
     e.preventDefault();
@@ -34,7 +36,7 @@ function Login() {
 
   const playAudio = (src) => {
     const sound = new Howl({ src: [src] });
-    sound.play();
+    if (sounds) sound.play();
   };
 
   return (

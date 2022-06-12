@@ -29,8 +29,14 @@ function Game() {
 
   const [timer, setTimer] = useState(30);
   const { index, questions } = results;
-  const { questionsAmount, assertions, setAssertions, points, resetScore } =
-    useContext(GameContext);
+  const {
+    questionsAmount,
+    assertions,
+    setAssertions,
+    points,
+    resetScore,
+    sounds,
+  } = useContext(GameContext);
   const { token } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -50,8 +56,8 @@ function Game() {
 
   const playAudio = (src) => {
     const sound = new Howl({ src: [src] });
-    sound.play();
-  }
+    if (sounds) sound.play();
+  };
 
   useEffect(() => {
     resetScore();

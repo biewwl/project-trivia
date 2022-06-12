@@ -19,15 +19,15 @@ function Ranking() {
   const existRanking = rankingLS !== null;
   const ranking = existRanking ? ordenateArray(rankingLS) : [];
 
-  const { assertions, points, resetScore, questionsAmount } =
+  const { assertions, points, resetScore, questionsAmount, sounds } =
     useContext(GameContext);
   const { name, avatar } = useContext(UserContext);
   const { loggedIn, setLoggedIn } = useContext(LoginContext);
 
   const playAudio = (src) => {
     const sound = new Howl({ src: [src] });
-    sound.play();
-  }
+    if (sounds) sound.play();
+  };
 
   useEffect(() => {
     if (loggedIn) {
