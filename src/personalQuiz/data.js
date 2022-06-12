@@ -202,7 +202,7 @@ const questions = [
   },
   {
     category: "Língua Portuguesa",
-    correct_answer: "Substantivo, verbo e preposição.",
+    correct_answer: "Substantivo, verbo e preposição",
     difficulty: "hard",
     incorrect_answers: [
       "Vogais, semivogais e consoantes",
@@ -275,12 +275,12 @@ const questions = [
       "Eu caberei",
     ],
     question:
-      "Como é a conjugação do verbo caber na 1.ª pessoa do singular do presente do indicativo?",
+      "Como é a conjugação do verbo caber na 1ª pessoa do singular do presente do indicativo?",
     type: "multiple",
   },
   {
     category: "Ciências",
-    correct_answer: "Gonorreia, clamídia e sífilis.",
+    correct_answer: "Gonorreia, clamídia e sífilis",
     difficulty: "medium",
     incorrect_answers: [
       "Aids, tricomoníase e ebola",
@@ -606,7 +606,7 @@ const questions = [
   {
     category: "Entretenimento",
     correct_answer: "The Doors",
-    difficulty: "",
+    difficulty: "medium",
     incorrect_answers: [
       "The Police",
       "Pink Floyd",
@@ -706,6 +706,490 @@ const questions = [
     question:
       "O que é filantropo?",
     type: "multiple",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Austrália é o único país que vivem os coalas",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "A Amazônia é a floresta tropical mais extensa do mundo",
+    type: "boolean",
+  },
+  {
+    category: "Entretenimento",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "As lutas de judô são disputadas no tablado",
+    type: "boolean",
+  },
+  {
+    category: "Língua Portuguesa",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Unigênito é o nome dado ao último filho de um casal",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "O nome do oceano atlântico vem de Atlas, o deus grego, filho de Netuno o deus dos mares",
+    type: "boolean",
+  },
+  {
+    category: "Língua Portuguesa",
+    correct_answer: "False",
+    difficulty: "medium",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Cabra é usado para machos e fêmeas",
+    type: "boolean",
+  },
+  {
+    category: "Matemática",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Um quilometro equivale a 1000 metros",
+    type: "boolean",
+  },
+  {
+    category: "Língua Portuguesa",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Um ano bissexto tem 364 dias",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Salvador já foi capital do Brasil",
+    type: "boolean",
+  },
+  {
+    category: "Entretenimento",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Antes de ser narrador de futebol, Galvão Bueno foi jogador",
+    type: "boolean",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "A gelatina é feita de ossos, ligamentos, tecidos de vacas e porco principalmente",
+    type: "boolean",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "False",
+    difficulty: "medium",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Nem todo quadrado é um retângulo",
+    type: "boolean",
+  },
+  {
+    category: "Matemática",
+    correct_answer: "True",
+    difficulty: "hard",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "2 + 2, 2x2 e 2² têm o mesmo resultado",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "O Brasil tem um sistema de governo parlamentarista",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "O mosquito é o animal que mata mais humanos por ano",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Oceano Atlântico é o maior oceano do mundo",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Júpiter é o maior planeta do sistema solar",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Tonga é um país da África",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "hard",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "A África está localizada nos quatro hemisférios terrestres (Hemisférios Norte, Sul, Ocidental e Oriental)",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "hard",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "O Brasil faz fronteira com um membro da União Europeia",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "hard",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Porto Rico é um país",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "medium",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Quem nasce em Estocolmo, capital da Suécia é estocolmiense",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "República da China é o nome oficial de Taiwan",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "medium",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "A Rússia é maior que a América do Norte",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "O Vaticano é mais povoado que a China",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "O Bahia é considerado o primeiro campeão brasileiro da história",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "O Sport enfrentou o Real Madrid na inauguração da iluminação noturna do estádio Santiago Bernabéu",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Brasil foi o país que criou o futebol",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "False",
+    difficulty: "hard",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "27 milhas é a distância de uma maratona",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "hard",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Michael Jordan ganhou 6 campeonatos pelo Chicago Bulls",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "False",
+    difficulty: "hard",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Manny Pacquiao é um boxeador lendário dos EUA",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Lionel Messi é o maior campeão da Bola de Ouro, do Melhor do Mundo da FIFA e da Chuteira de Ouro",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Lionel Messi é o maior campeão da Bola de Ouro, do Melhor do Mundo da FIFA e da Chuteira de Ouro",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Liverpool ganhou a Liga dos Campeões de 2022",
+    type: "boolean",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "O recorde de filhos que uma mulher deu à luz é de 69 filhos",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "O Beto Carrero World é o maior parque temático do mundo",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "A maior estátua do mundo possui 182m e está localizada na Índia",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "hard",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "A maior rua do mundo possui 58km",
+    type: "boolean",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "False",
+    difficulty: "easy",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "A torre Pisa é a torre mais inclinada do mundo",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Michael Phelps é o maior ganhador de medalhas nos Jogos Olímpicos",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "medium",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Anderson Silva é o maior defensor do cinturão no UFC",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "False",
+    difficulty: "hard",
+    incorrect_answers: [
+      "True",
+    ],
+    question:
+      "Curry é o jogador com o maior número de pontos em uma única partida de basquete",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Cristiano Ronaldo é o maior artilheiro do mundo em todos os tempos do futebol",
+    type: "boolean",
+  },
+  {
+    category: "Esportes",
+    correct_answer: "True",
+    difficulty: "easy",
+    incorrect_answers: [
+      "False",
+    ],
+    question:
+      "Lionel Messi não é o único jogador a marcar mais de 40 gols em 10 temporadas consecutivas",
+    type: "boolean",
   },
 ];
 
