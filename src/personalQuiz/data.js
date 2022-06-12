@@ -369,6 +369,344 @@ const questions = [
       "Que líder mundial ficou conhecida como “Dama de Ferro”?",
     type: "multiple",
   },
+  {
+    category: "Entretenimento",
+    correct_answer: "Muito Barulho por Nada (2012)",
+    difficulty: "hard",
+    incorrect_answers: [
+      "Capitães de Areia (2011)",
+      "A Dama das Camélias (1936)",
+      "A Revolução dos Bichos (1954)",
+    ],
+    question:
+      "Qual desses filmes foi baseado na obra de Shakespeare?",
+    type: "multiple",
+  },
+  {
+    category: "Hitória",
+    correct_answer: "Neil Armstrong",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Yuri Gagarin",
+      "Charles Duke",
+      "Charles Conrad",
+    ],
+    question:
+      "Quem foi o primeiro homem a pisar na Lua?",
+    type: "multiple",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "Tipo O",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Tipo A",
+      "Tipo AB",
+      " Tipo B",
+    ],
+    question:
+      "As pessoas de qual tipo sanguíneo são consideradas doadores universais?",
+    type: "multiple",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "Os Y",
+    difficulty: "medium",
+    incorrect_answers: [
+      "Os X",
+      "Os V",
+      "Os W",
+    ],
+    question:
+      "Quais são os cromossomos que determinam o sexo masculino?",
+    type: "multiple",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "Nova Gales do Sul",
+    difficulty: "medium",
+    incorrect_answers: [
+      "Victoria",
+      "Tasmânia",
+      "Queensland",
+    ],
+    question:
+      "Em que estado australiano fica situada a cidade de Sydney?",
+    type: "multiple",
+  },
+  {
+    category: "Hitória",
+    correct_answer: "O escotismo",
+    difficulty: "hard",
+    incorrect_answers: [
+      "O clube dos aventureiros",
+      "A associação juvenil",
+      "A Organização mundial da juventude",
+    ],
+    question:
+      "Que organização juvenil foi fundado por Baden-Powell?",
+    type: "multiple",
+  },
+  {
+    category: "Hitória",
+    correct_answer: "Uma loba",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Uma vaca",
+      "Uma ovelha",
+      "Uma cabra",
+    ],
+    question:
+      "Quem amamentou os gêmeos Rômulo e Remo?",
+    type: "multiple",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "Colômbia e Peru",
+    difficulty: "medium",
+    incorrect_answers: [
+      "Colômbia e Venezuela",
+      "Brasil e Colômbia",
+      "Peru e Equador",
+    ],
+    question:
+      "Que países fazem fronteira com o Equador?",
+    type: "multiple",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "Peru",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Pavão",
+      "Urubu",
+      "Cacatua",
+    ],
+    question:
+      "Que animal gruguleja?",
+    type: "multiple",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "Indonésia",
+    difficulty: "medium",
+    incorrect_answers: [
+      "Bahamas",
+      "Finlândia",
+      "Maldivas",
+    ],
+    question:
+      "Qual é o maior arquipélago da Terra?",
+    type: "multiple",
+  },
+  {
+    category: "Geografia",
+    correct_answer: "Oceano Índico",
+    difficulty: "medium",
+    incorrect_answers: [
+      "Oceano Antártico",
+      "Oceano Atlântico",
+      "Oceano Pacífico",
+    ],
+    question:
+      "Em que oceano fica Madagascar?",
+    type: "multiple",
+  },
+  {
+    category: "Artes",
+    correct_answer: "Marcel Duchamp",
+    difficulty: "hard",
+    incorrect_answers: [
+      "Pablo Picasso",
+      "Salvador Dalí",
+      "Van Gogh",
+    ],
+    question:
+      "Que artista é conhecido como um dos expoentes máximos do Ready-Mades?",
+    type: "multiple",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "Ouro",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Alumínio",
+      "Arsênio",
+      "Prata",
+    ],
+    question:
+      "Qual o metal cujo símbolo químico é o Au?",
+    type: "multiple",
+  },
+  {
+    category: "História",
+    correct_answer: "No século XIV",
+    difficulty: "hard",
+    incorrect_answers: [
+      "No século X",
+      "No século XI",
+      "No século XIII",
+    ],
+    question:
+      "Em que século o continente europeu foi devastado pela peste bubônica?",
+    type: "multiple",
+  },
+  {
+    category: "História",
+    correct_answer: "Matusalém",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Jesus Cristo",
+      "Noé",
+      "Benjamim",
+    ],
+    question:
+      "Quem viveu, segundo a Bíblia, 969 anos?",
+    type: "multiple",
+  },
+  {
+    category: "Artes",
+    correct_answer: "Michelangelo",
+    difficulty: "hard",
+    incorrect_answers: [
+      "Leonardo da Vinci",
+      "Rafael",
+      "Sandro Botticelli",
+    ],
+    question:
+      "Quem pintou o teto da capela sistina?",
+    type: "multiple",
+  },
+  {
+    category: "Matemática",
+    correct_answer: "90",
+    difficulty: "easy",
+    incorrect_answers: [
+      "45",
+      "180",
+      "360",
+    ],
+    question:
+      "Quantos graus são necessários para que dois ângulos sejam complementares?",
+    type: "multiple",
+  },
+  {
+    category: "Artes",
+    correct_answer: "Ésquilo",
+    difficulty: "medium",
+    incorrect_answers: [
+      "Homero",
+      "Eurípedes",
+      "Plutarco",
+    ],
+    question:
+      "Quem foi o criador da tragédia grega?",
+    type: "multiple",
+  },
+  {
+    category: "Entretenimento",
+    correct_answer: "The Doors",
+    difficulty: "",
+    incorrect_answers: [
+      "The Police",
+      "Pink Floyd",
+      "Nirvana",
+    ],
+    question:
+      "Jim Morrison era vocalista de que grupo?",
+    type: "multiple",
+  },
+  {
+    category: "Artes",
+    correct_answer: "Cristo Redentor",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Elevador Lacerda",
+      "Estação da Luz",
+      "Palácio da Alvorada",
+    ],
+    question:
+      "Qual destas obras arquitetônicas brasileiras é uma das Sete Maravilhas do Mundo Moderno?",
+    type: "multiple",
+  },
+  {
+    category: "História",
+    correct_answer: "1891, Deodoro da Fonseca",
+    difficulty: "hard",
+    incorrect_answers: [
+      "1890, Floriano Peixoto",
+      "1889, Hermes da Fonseca",
+      " 1930, Getúlio Vargas",
+    ],
+    question:
+      "Em que ano e quem foi eleito o primeiro presidente do Brasil?",
+    type: "multiple",
+  },
+  {
+    category: "Artes",
+    correct_answer: "Tarsila do Amaral",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Di Cavalcanti",
+      "Anita Malfatti",
+      "Candido Potinari",
+    ],
+    question:
+      "As obras Abaporu, Operários e Antropofagia foram pintadas por qual artista brasileiro?",
+    type: "multiple",
+  },
+  {
+    category: "Artes",
+    correct_answer: "Ucrânia",
+    difficulty: "hard",
+    incorrect_answers: [
+      "Portugal",
+      "França",
+      "Rússia",
+    ],
+    question:
+      "Em que país nasceu Clarice Lispector?",
+    type: "multiple",
+  },
+  {
+    category: "Língua Portuguesa",
+    correct_answer: "não se olha os dentes",
+    difficulty: "easy",
+    incorrect_answers: [
+      "sai caro",
+      "tem medo de água fria",
+      "não se olha o rabo",
+    ],
+    question:
+      "Complete o provérbio “Cavalo dado …”",
+    type: "multiple",
+  },
+  {
+    category: "Ciências",
+    correct_answer: "Laringe e traqueia",
+    difficulty: "easy",
+    incorrect_answers: [
+      "Pulmões e faringe",
+      "Esôfago e brônquios",
+      "Tireoide e hipófise",
+    ],
+    question:
+      "Quais dos órgãos abaixo pertencem ao sistema respiratório?",
+    type: "multiple",
+  },
+  {
+    category: "Língua Portuguesa",
+    correct_answer: "Pessoa que pratica a caridade",
+    difficulty: "medium",
+    incorrect_answers: [
+      "Pessoa que tem excesso de confiança",
+      "Pessoa egoísta",
+      "Poema de quatro versos",
+    ],
+    question:
+      "O que é filantropo?",
+    type: "multiple",
+  },
 ];
 
 const getPersonalQuestions = (amount) => {
