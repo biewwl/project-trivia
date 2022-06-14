@@ -129,7 +129,9 @@
 }
 
 .sounds-control .sounds-on:active,
-.sounds-control .sounds-off:active {
+.sounds-control .sounds-off:active,
+.language-control .language-en:active,
+.language-control .language-pt-br:active {
   box-shadow: none;
   transform: translateY(3px);
 }
