@@ -63,7 +63,6 @@
 .game {
   align-items: center;
   background-image: url(../images/wallpaper-game.jpg);
-  /* https://data.1freewallpapers.com/download/mountains-landscape-wildlife-art-vector-2400x1350.jpg */
   background-position: center;
   background-size: cover;
   display: flex;

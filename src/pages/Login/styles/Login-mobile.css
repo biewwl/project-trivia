@@ -3,11 +3,16 @@
     height: 100vh;
     min-height: 415px;
   }
-
+  
   .login form {
+    border-width: 1px;
     width: 90%;
     height: 400px;
     grid-template-rows: 0.5fr 1fr;
+  }
+
+  .login-inputs input {
+    border-width: 1px;
   }
 
   .login-inputs .play {
