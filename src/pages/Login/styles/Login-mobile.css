@@ -15,6 +15,10 @@
     border-width: 1px;
   }
 
+  .login-inputs input:focus {
+    border-width: 1px;
+  }
+
   .login-inputs .play {
     position: static;
     border-radius: 0.5em;
