@@ -33,7 +33,7 @@
   height: 400px;
   justify-items: center;
   width: 600px;
-  border: 3px solid #1fbba6;
+  border: 3px solid #80B9D4;
 }
 
 .login-user-area {
@@ -57,7 +57,7 @@
 .login-inputs input {
   background-color: #ecfffc;
   border-radius: 25px;
-  border: 3px solid #1fbba6;
+  border: 3px solid #80B9D4;
   height: 30px;
   margin: 10px 0;
   padding: 5px;
@@ -65,17 +65,17 @@
 }
 
 .login-inputs input:focus {
-  border: 3px solid #1fbba6;
+  border: 3px solid #80B9D4;
   outline: 0;
 }
 
 .login .play {
   align-items: center;
-  background-color: #1fbba6;
+  background-color: #80B9D4;
   border-radius: 50%;
   border: none;
   bottom: 3px;
-  box-shadow: 0 3px 0 #1a9b8a;
+  box-shadow: 0 3px 0 #4e9bbf;
   color: white;
   cursor: pointer;
   display: flex;
@@ -137,9 +137,9 @@
 }
 
 .settings-option {
-  background-color: #5197fa;
+  background-color: #80B9D4;
   border-radius: 50%;
-  box-shadow: 0 3px 0 #3f75c1;
+  box-shadow: 0 3px 0 #4e9bbf;
   height: 32.4px;
   width: 32.4px;
 }

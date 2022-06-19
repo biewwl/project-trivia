@@ -11,7 +11,7 @@
 
 .settings {
   align-items: center;
-  background-image: url(../images/wallpaper-ranking.jpg);
+  background-image: url(../images/wallpaper-settings.jpg);
   background-position: top;
   background-size: cover;
   display: flex;
@@ -46,7 +46,7 @@
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.6);
   border-radius: 0.5em;
-  border: 3px solid #1fbba6;
+  border: 3px solid #80B9D4;
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -59,9 +59,9 @@
 .settings .sounds-control,
 .settings .language-control {
   align-items: center;
-  background-color: #1fbba6;
+  background-color: #80B9D4;
   border-radius: 0.5em;
-  border: 3px solid #1a9b8a;
+  border: 3px solid #4e9bbf;
   color: white;
   display: grid;
   font-family: cream, sans-serif;
@@ -96,7 +96,7 @@
 .amount-control .input-amount::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background: #15796c;
+  background: #4e9bbf;
   border-radius: 50%;
   cursor: pointer;
   height: 15px;
@@ -149,7 +149,7 @@
 }
 
 .settings .save {
-  background-color: #1fbba6;
+  background-color: #80B9D4;
   border-radius: 0.5em;
   border: none;
   box-shadow: 0 3px 0 #15796c;
