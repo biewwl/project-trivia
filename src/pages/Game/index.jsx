@@ -154,7 +154,7 @@ function Game() {
     const n = { five: 5, ten: 10 };
     if (timer <= n.five) return "timerRed";
     if (timer <= n.ten) return "timerYellow";
-    return "timerGreen";
+    return "timerBlue";
   };
 
   const feedbackAssertion = () => (isCorrect ? "Correct" : "Incorrect");
