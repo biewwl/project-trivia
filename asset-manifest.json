@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/project-trivia/static/css/main.2fa08558.css",
+    "main.css": "/project-trivia/static/css/main.4d051f4b.css",
     "main.js": "/project-trivia/static/js/main.dc287116.js",
     "static/js/787.64302966.chunk.js": "/project-trivia/static/js/787.64302966.chunk.js",
     "static/media/ranking-wallpaper.jpg": "/project-trivia/static/media/ranking-wallpaper.16efa152a980db21a791.jpg",
@@ -21,12 +21,12 @@
     "static/media/Click.wav": "/project-trivia/static/media/Click.e774476a9c074edf8c83.wav",
     "static/media/Play.wav": "/project-trivia/static/media/Play.a1e153d8bfb528698e77.wav",
     "index.html": "/project-trivia/index.html",
-    "main.2fa08558.css.map": "/project-trivia/static/css/main.2fa08558.css.map",
+    "main.4d051f4b.css.map": "/project-trivia/static/css/main.4d051f4b.css.map",
     "main.dc287116.js.map": "/project-trivia/static/js/main.dc287116.js.map",
     "787.64302966.chunk.js.map": "/project-trivia/static/js/787.64302966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fa08558.css",
+    "static/css/main.4d051f4b.css",
     "static/js/main.dc287116.js"
   ]
 }
