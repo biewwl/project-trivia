@@ -4,20 +4,20 @@ import { GameContext } from "../../context/GameContext";
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import { LoginContext } from "../../context/LoginContext";
-import lS from "../../helpers/localStorageManager";
+import lS from "manager-local-storage";
 import "./styles/Ranking.css";
 import "./styles/Ranking-mobile.css";
 import Quit from "./audios/UI Back.wav";
 import { Howl } from "howler";
 
 function Ranking() {
-  const ordenateArray = (array) => array.sort((a, b) => b.points - a.points);
+  const ordinateArray = (array) => array.sort((a, b) => b.points - a.points);
   const getTop3 = (array) => array.slice(0, 3);
   const getOthersTop = (array) => array.slice(3);
 
   const rankingLS = lS("g", "biewwl-trivia-ranking");
   const existRanking = rankingLS !== null;
-  const ranking = existRanking ? ordenateArray(rankingLS) : [];
+  const ranking = existRanking ? ordinateArray(rankingLS) : [];
 
   const { assertions, points, resetScore, questionsAmount, sounds, language } =
     useContext(GameContext);

@@ -1,5 +1,5 @@
+import lS from "manager-local-storage";
 import { createContext, useState } from "react";
-import lS from "../helpers/localStorageManager";
 
 export const GameContext = createContext();
 
