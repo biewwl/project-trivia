@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-trivia/static/css/main.960e8697.css",
-    "main.js": "/project-trivia/static/js/main.dc287116.js",
+    "main.js": "/project-trivia/static/js/main.eb759ede.js",
     "static/js/787.64302966.chunk.js": "/project-trivia/static/js/787.64302966.chunk.js",
     "static/media/ranking-wallpaper.jpg": "/project-trivia/static/media/ranking-wallpaper.16efa152a980db21a791.jpg",
     "static/media/Leaving.wav": "/project-trivia/static/media/Leaving.fb43108908b2c55a7402.wav",
@@ -22,11 +22,11 @@
     "static/media/Play.wav": "/project-trivia/static/media/Play.a1e153d8bfb528698e77.wav",
     "index.html": "/project-trivia/index.html",
     "main.960e8697.css.map": "/project-trivia/static/css/main.960e8697.css.map",
-    "main.dc287116.js.map": "/project-trivia/static/js/main.dc287116.js.map",
+    "main.eb759ede.js.map": "/project-trivia/static/js/main.eb759ede.js.map",
     "787.64302966.chunk.js.map": "/project-trivia/static/js/787.64302966.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.960e8697.css",
-    "static/js/main.dc287116.js"
+    "static/js/main.eb759ede.js"
   ]
 }
